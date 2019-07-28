@@ -30,3 +30,10 @@ func rollDie(size int, noOfDie int) (int, []int) {
 	}
 	return sum, rolls
 }
+
+func MaxRoll(input string) int {
+	diceNumbers := strings.Split(input, "d")
+	noOfDie, _ := strconv.Atoi(diceNumbers[0])
+	sizeOfDie, _ := strconv.Atoi(diceNumbers[1])
+	return noOfDie * sizeOfDie
+}
